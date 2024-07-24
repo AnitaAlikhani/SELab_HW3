@@ -1,6 +1,9 @@
-package main;
+package com.TDDAndCoverage;
 
-import main.classes.*;
+import com.TDDAndCoverage.classes.Book;
+import com.TDDAndCoverage.classes.Library;
+import com.TDDAndCoverage.classes.SearchByType;
+import com.TDDAndCoverage.classes.Student;
 
 import java.util.ArrayList;
 import java.util.Arrays;

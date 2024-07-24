@@ -1,4 +1,4 @@
-package main.classes;
+package com.TDDAndCoverage.classes;
 
 public class Book {
     private int id;

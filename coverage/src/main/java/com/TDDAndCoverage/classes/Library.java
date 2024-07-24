@@ -1,4 +1,4 @@
-package main.classes;
+package com.TDDAndCoverage.classes;
 
 import java.util.ArrayList;
 
@@ -36,7 +36,7 @@ public class Library {
             System.out.println("!! Student already has the book.");
             return false;
         }
-
+        // TODO no checking for student existence
         this.books.remove(book);
         student.addBook(book);
         System.out.println(book.getTitle() + " lent to " + student.getName() + ".");
