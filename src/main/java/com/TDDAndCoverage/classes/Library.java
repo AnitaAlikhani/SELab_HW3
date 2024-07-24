@@ -3,6 +3,7 @@ package com.TDDAndCoverage.classes;
 import java.util.ArrayList;
 
 public class Library {
+
     private ArrayList<Book> books;
     private ArrayList<Student> students;
 
@@ -57,6 +58,7 @@ public class Library {
             return false;
         }
         if (student.hasBook(book)) {
+            // TODO no removing book from student list
             this.books.add(book);
             System.out.println(student.getName() + " returned " + book.getTitle() + ".");
             return true;
