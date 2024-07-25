@@ -1,7 +1,9 @@
 package com.unittest.codecoverage.service;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.List;
@@ -19,6 +21,7 @@ import com.unittest.codecoverage.models.Person;
 import com.unittest.codecoverage.repositories.PersonRepository;
 import com.unittest.codecoverage.services.PersonService;
 import com.unittest.codecoverage.services.impl.PersonServiceImpl;
+import org.mockito.stubbing.OngoingStubbing;
 
 @ExtendWith(MockitoExtension.class)
 public class PersonServiceTest {
@@ -96,5 +99,30 @@ public class PersonServiceTest {
 			.hasFieldOrPropertyWithValue("errors", expectedErrors)
 			.hasMessage(expectedMessage);
 	}
+
+	@Test
+	public void testUpdate_shouldUpdatePersonWithSuccessWhenSomePersonFieldsAreChanged() {
+		Person person = new Person();
+		person.setName("Name");
+		person.setAge(21);
+		person.setGender(Gender.M);
+
+		when(repository.insert(any(Person.class))).thenReturn(person);
+		service.insert(person);
+
+
+		person.setName("New Name");
+		person.setAge(25);
+		repository.update(any(Person.class));
+		service.update(person);
+
+		verify(repository).update(person);
+		assertThat(person.getName()).isEqualTo("New Name");
+		assertThat(person.getAge()).isEqualTo(25);
+
+	}
+
+
+
 
 }
