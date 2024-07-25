@@ -18,7 +18,7 @@ class PersonRepositoryTest {
     }
 
     @Test
-    void testInsertValidPersonReturnsSamePerson() {
+    void testInsertValidPerson_ReturnsSamePerson() {
         Person person = new Person();
         person.setName("New Name");
 
@@ -28,12 +28,12 @@ class PersonRepositoryTest {
     }
 
     @Test
-    void testInsertNullPersonThrowsNullPointerException() {
+    void testInsertNullPerson_ThrowsNullPointerException() {
         assertThrows(NullPointerException.class, () -> repository.insert(null));
     }
 
     @Test
-    void testUpdateValidPersonDoesNotThrowException() {
+    void testUpdateValidPerson_DoesNotThrowException() {
         Person person = new Person();
         person.setName("New Name");
 
@@ -41,28 +41,28 @@ class PersonRepositoryTest {
     }
 
     @Test
-    void testUpdateNullPersonThrowsNullPointerException() {
+    void testUpdateNullPerson_ThrowsNullPointerException() {
         assertThrows(NullPointerException.class, () -> repository.update(null));
     }
 
     @Test
-    void testDeleteValidNameDoesNotThrowException() {
+    void testDeleteValidName_DoesNotThrowException() {
         assertDoesNotThrow(() -> repository.delete("New Name"));
     }
 
     @Test
-    void testDeleteNullNameThrowsNullPointerException() {
+    void testDeleteNullName_ThrowsNullPointerException() {
         assertThrows(NullPointerException.class, () -> repository.delete(null));
     }
 
     @Test
-    void testGetValidNameReturnsNull() {
+    void testGetValidName_ReturnsNull() {
         Person result = repository.get("New Name");
         assertNull(result);
     }
 
     @Test
-    void testGetNullNameThrowsNullPointerException() {
+    void testGetNullName_ThrowsNullPointerException() {
         assertThrows(NullPointerException.class, () -> repository.get(null));
     }
 }
