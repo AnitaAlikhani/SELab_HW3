@@ -2,8 +2,7 @@
 
 
 ## گزارش آزمایش
-مرحله‌ی اول:
-  1. در این پروژه مجموعا ۲ ایراد وجود دارد. آن‌ها را پیدا کنید، برای هرکدام تستی بنویسید که آن ایراد را تشخیص دهد، در نهایت برنامه را طوری تغییر دهید که ایرادها برطرف شده باشند.
+### مرحله‌ی اول: در این پروژه مجموعا ۲ ایراد وجود دارد. آن‌ها را پیدا کنید، برای هرکدام تستی بنویسید که آن ایراد را تشخیص دهد، در نهایت برنامه را طوری تغییر دهید که ایرادها برطرف شده باشند.
 
 
    ایراد اول: در کلاس Library در تابع lendBook وجود دانشجو در کتابخانه بررسی نشده و می‌توان کتاب را به دانشجویی قرض داد که اصلا در لیست دانشجوهای کتابخانه وجود ندارد.
@@ -21,14 +20,46 @@
 تست تابع returnBook بعد از برطرف کردن ایراد:
   ![Screenshot from 2024-07-24 16-51-04](https://github.com/user-attachments/assets/10d53c37-d074-4f33-b51e-7bd04dd13f1a)
 
-مرحله‌ی دوم:
+### مرحله‌ی دوم: در فایل `Library.java` دو تابع جستجو وجود دارد که باید با توجه به کامنت‌های آن‌ها و با استفاده از روش TDD کاملشان کنید. برای این کار ابتدا تعدادی تست بنویسید که نیازمندی‌های این ۲ تابع را پوشش دهند، سپس ۲ تابع را به شکلی کامل کنید که همه آن‌ها پاس شوند.
+  
+  #### تابع searchStudents:
+  گام اول: انتظارات از برنامه را به صورت unit test بنویسید.  
+  نوشتن تست‌های testSearchStudentsById و testSearchStudentsByName در LibraryTest.java. این تست‌ها انتظارات ما از تابع searchStudents  را مشخص می‌کنند.
+  ![](https://github.com/user-attachments/assets/7a1ab8c3-80fb-4c9d-a9ec-d2eaab28af21)
+  گام دوم: test ها را compile کرده و error های آن را شناسایی کنید.  
+  مشاهده می‌کنیم که خطاهای کامپایل به دلیل عدم تعریف تابع `searchStudents` و بازگرداندن null شناسایی شدند.
+  ![](https://github.com/user-attachments/assets/a04ad8d8-0400-44b7-a089-766697f9aac9)
+  ![](https://github.com/user-attachments/assets/b11d0378-6243-4c26-8f29-5d2b57b57c15)
+  گام سوم: با اضافه کردن کد در برنامه اصلی، compile error ها را برطرف نمایید.  
+  در این مرحله، با اضافه کردن تابع مورد نیاز به کلاس `Library.java`، خطاهای کامپایل را برطرف می‌کنیم.
+  ![](https://github.com/user-attachments/assets/db15cd47-70d1-4ed2-935e-c0d529f02fdb)
+  گام چهارم: test ها را اجرا (run) کنید تا اشکالات زمان اجرا مشخص گردد.  
+  در این مرحله، تست‌ها را اجرا می‌کنیم تا خطاهای زمان اجرا شناسایی شوند. مشاهده ‌می‌کنیم که خطایی وجود ندارد.
+  ![](https://github.com/user-attachments/assets/fcd7dc9d-db12-4004-bc36-fb4925681769)
+  ![](https://github.com/user-attachments/assets/fbab5d7a-4ab8-4e2a-bf7f-db4c6e2ac47a)
+  گام پنجم: با تغییر کد در برنامه، runtime error ها را رفع نمایید.  
+  تمامی تست‌ها با موفقیت اجرا شدند و هیچ خطای زمان اجرایی وجود ندارد.
 
-2. در فایل
-`Library.java`
-دو تابع جستجو وجود دارد که باید با توجه به کامنت‌های آن‌ها و با استفاده از روش 
-TDD
-کاملشان کنید. برای این کار ابتدا تعدادی تست بنویسید که نیازمندی‌های این ۲ تابع را پوشش دهند، سپس ۲ تابع را به شکلی کامل کنید که همه آن‌ها پاس شوند.
-
+  #### تابع searchBooks:
+  گام اول: انتظارات از برنامه را به صورت unit test بنویسید.
+  
+  نوشتن تست‌های testSearchBooksByTitle، testSearchBooksById و testSearchBooksByAuthor در LibraryTest.java. این تست‌ها انتظارات ما از تابع searchBooks  را مشخص می‌کنند.
+  ![](https://github.com/user-attachments/assets/657ced6d-8a7f-4f94-ba1d-2bc034cb23a5)
+  گام دوم: test ها را compile کرده و error های آن را شناسایی کنید.  
+   مشاهده می‌کنیم که خطاهای کامپایل به دلیل عدم تعریف تابع `searchBooks` و بازگرداندن null شناسایی شدند.
+  ![](https://github.com/user-attachments/assets/451d0bef-6f37-4ede-b68e-8d723405a1d1)
+  ![](https://github.com/user-attachments/assets/a8b62e46-bb95-49e0-a071-3a25f40446ee)
+  ![](https://github.com/user-attachments/assets/56872dbe-68fc-4713-8df4-575b90cd0b55)
+  گام سوم: با اضافه کردن کد در برنامه اصلی، compile error ها را برطرف نمایید.  
+  در این مرحله، با اضافه کردن تابع مورد نیاز به کلاس `Library.java`، خطاهای کامپایل را برطرف می‌کنیم.
+  ![](https://github.com/user-attachments/assets/4a43536e-4518-45ef-b3ab-2d5d4303a929)
+  گام چهارم: test ها را اجرا (run) کنید تا اشکالات زمان اجرا مشخص گردد.  
+  در این مرحله، تست‌ها را اجرا می‌کنیم تا خطاهای زمان اجرا شناسایی شوند. مشاهده ‌می‌کنیم که خطایی وجود ندارد.
+  ![](https://github.com/user-attachments/assets/73686792-8425-4def-8437-d2ec362e13cf)
+  ![](https://github.com/user-attachments/assets/6f4b4ce7-71a6-49bf-859d-00f2a3b5dee9)
+  ![](https://github.com/user-attachments/assets/5a419b97-d1b1-40d9-97fe-357473cab0c1)
+  گام پنجم: با تغییر کد در برنامه، runtime error ها را رفع نمایید.  
+  تمامی تست‌ها با موفقیت اجرا شدند و هیچ خطای زمان اجرایی وجود ندارد.
 
 
 
