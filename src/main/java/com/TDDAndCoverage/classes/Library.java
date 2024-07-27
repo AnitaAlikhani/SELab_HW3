@@ -80,8 +80,17 @@ public class Library {
      * @return             The list of students that match the search criteria. Returns null if search type is title or author.
      */
     public ArrayList<Student> searchStudents(SearchByType searchByType, ArrayList<Object> keys) {
-        // TODO complete function
-        return null;
+        ArrayList<Student> result = new ArrayList<>();
+        for (Student student : students) {
+            for (Object key : keys) {
+                if (searchByType == SearchByType.ID && key instanceof Integer && student.getId() == (Integer) key) {
+                    result.add(student);
+                } else if (searchByType == SearchByType.NAME && key instanceof String && student.getName().equalsIgnoreCase((String) key)) {
+                    result.add(student);
+                }
+            }
+        }
+        return result;
     }
 
     /**
@@ -93,8 +102,19 @@ public class Library {
      * @return             The list of books that match the search criteria. Returns null if search type is name.
      */
     public ArrayList<Book> searchBooks(SearchByType searchByType, ArrayList<Object> keys) {
-        // TODO complete function
-        return null;
+        ArrayList<Book> result = new ArrayList<>();
+        for (Book book : books) {
+            for (Object key : keys) {
+                if (searchByType == SearchByType.ID && key instanceof Integer && book.getId() == (Integer) key) {
+                    result.add(book);
+                } else if (searchByType == SearchByType.TITLE && key instanceof String && book.getTitle().equalsIgnoreCase((String) key)) {
+                    result.add(book);
+                } else if (searchByType == SearchByType.AUTHOR && key instanceof String && book.getAuthor().equalsIgnoreCase((String) key)) {
+                    result.add(book);
+                }
+            }
+        }
+        return result;
     }
 
     /**
