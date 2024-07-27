@@ -62,4 +62,31 @@ public class LibraryTest {
         assertEquals("Alice", students.get(0).getName());
         assertEquals("Bob", students.get(1).getName());
     }
+
+    @Test
+    public void testSearchBooksById() {
+        ArrayList<Object> ids = new ArrayList<>();
+        ids.add(1);
+        ArrayList<Book> books = library.searchBooks(SearchByType.ID, ids);
+        assertEquals(1, books.size());
+        assertEquals("Effective Java", books.get(0).getTitle());
+    }
+
+    @Test
+    public void testSearchBooksByTitle() {
+        ArrayList<Object> titles = new ArrayList<>();
+        titles.add("Clean Code");
+        ArrayList<Book> books = library.searchBooks(SearchByType.TITLE, titles);
+        assertEquals(1, books.size());
+        assertEquals("Clean Code", books.get(0).getTitle());
+    }
+
+    @Test
+    public void testSearchBooksByAuthor() {
+        ArrayList<Object> authors = new ArrayList<>();
+        authors.add("Andrew Hunt");
+        ArrayList<Book> books = library.searchBooks(SearchByType.AUTHOR, authors);
+        assertEquals(1, books.size());
+        assertEquals("The Pragmatic Programmer", books.get(0).getTitle());
+    }
 }
