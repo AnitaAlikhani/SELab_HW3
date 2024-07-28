@@ -50,5 +50,11 @@
 ![](https://github.com/user-attachments/assets/ce4d9555-639c-4a23-9eab-0b91f494685d)
 ![](https://github.com/user-attachments/assets/1b7234c8-a06d-40d1-b2b9-901039f42908)
 
+#### PersonValidator:
+![](https://github.com/user-attachments/assets/7654d696-3ca0-448f-930b-fa94d16fe08f)
+![](https://github.com/user-attachments/assets/a9faaac5-f967-4341-91bd-a9b625076522)
 
+مشاهده می‌کنیم که یکی از متدها کاور نشده‌ که با اضافه کردن متد زیر به کلاس PersonValidatorTest آن‌ را کاور کرده‌ایم.
+![](https://github.com/user-attachments/assets/e803313e-0166-4cbd-952f-d8ff27d8690e)
+![](https://github.com/user-attachments/assets/fe5c21df-310f-416d-ac64-f6dc297f66f1)
 
