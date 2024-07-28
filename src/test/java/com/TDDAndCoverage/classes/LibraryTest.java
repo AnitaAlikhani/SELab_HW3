@@ -47,6 +47,12 @@ public class LibraryTest {
     }
 
     @Test
+    public void testStudentExistenceInReturningBook() {
+        library.addBook(book);
+        assertFalse(library.returnBook(book, student), "Student is not in library list, returnBook must return False");
+    }
+
+    @Test
     public void testRemovingBookFromStudentListInReturningBook() {
         library.addBook(book);
         library.addStudent(student);
