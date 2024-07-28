@@ -38,6 +38,15 @@ public class LibraryTest {
     }
 
     @Test
+    public void testStudentHasBookInLendingBook() {
+        library.addBook(book);
+        library.addBook(book);
+        library.addStudent(student);
+        library.lendBook(book, student);
+        assertFalse(library.lendBook(book, student), "Student already has book, lendBook must return False");
+    }
+
+    @Test
     public void testRemovingBookFromStudentListInReturningBook() {
         library.addBook(book);
         library.addStudent(student);
