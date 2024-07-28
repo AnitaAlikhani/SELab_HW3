@@ -42,5 +42,13 @@
 ![](https://github.com/user-attachments/assets/3c8f6679-f767-4512-9546-9597148cb544)
 ![](https://github.com/user-attachments/assets/96bab95b-c615-4cc1-8f81-9b9122b86ed1)
 
+#### Footpassenger:
+![](https://github.com/user-attachments/assets/5e8f94df-5955-449b-8ef8-ba7386a5bcb6)
+![](https://github.com/user-attachments/assets/826bca43-248b-4eeb-8663-e44cad619fef)
+
+مشاهده می‌کنیم که دو تا از متدها کاور نشده‌اند که با اضافه کردن متدهای زیر به کلاس Footpassengertest آن‌ها را کاور کرده‌ایم.
+![](https://github.com/user-attachments/assets/ce4d9555-639c-4a23-9eab-0b91f494685d)
+![](https://github.com/user-attachments/assets/1b7234c8-a06d-40d1-b2b9-901039f42908)
+
 
 
