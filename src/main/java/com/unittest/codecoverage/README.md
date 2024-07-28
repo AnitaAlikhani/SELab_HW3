@@ -58,3 +58,16 @@
 ![](https://github.com/user-attachments/assets/e803313e-0166-4cbd-952f-d8ff27d8690e)
 ![](https://github.com/user-attachments/assets/fe5c21df-310f-416d-ac64-f6dc297f66f1)
 
+#### TrafficBehaviorServiceImpl:
+![](https://github.com/user-attachments/assets/015692a4-fcf5-49c9-99eb-5eb4b04a4631)
+
+
+برای دستیابی به پوشش کامل برای کلاس `TrafficBehaviorServiceImpl`، لازم بود تمام شرایط منطقی داخل متد `footpassengerCrossTheStreet` تست شود. این شامل تست کردن سناریوهایی بود که در آن‌ها چراغ ترافیک قرمز یا سبز بود، به همراه تغییرات در شدت ترافیک و اقدامات عابر پیاده (مانند عبور از جاده یا نگاه کردن به هر دو طرف).
+![](https://github.com/user-attachments/assets/f10ba886-ffaa-46d3-9da4-f0cda03ddb85)
+![](https://github.com/user-attachments/assets/91cb834c-6746-4aaa-a7eb-d0ffa10b05db)
+![](https://github.com/user-attachments/assets/47d7adbb-5036-46e3-a880-5247b0fd9f7e)
+![](https://github.com/user-attachments/assets/efd2f219-4b8b-49c3-85ff-913d8546f193)
+
+![](https://github.com/user-attachments/assets/4f37ec45-8075-4047-953c-f9fbbd8c6930)
+
+
