@@ -12,9 +12,9 @@ import com.unittest.codecoverage.services.PersonService;
 @Service
 public class PersonServiceImpl implements PersonService {
 	
-	private PersonValidator validator;
+	public PersonValidator validator;
 	@Autowired
-	private PersonRepository repository;
+    public PersonRepository repository;
 	
 	@Autowired
 	public PersonServiceImpl() {
