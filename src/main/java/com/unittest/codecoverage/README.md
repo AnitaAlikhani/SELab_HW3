@@ -70,4 +70,19 @@
 
 ![](https://github.com/user-attachments/assets/4f37ec45-8075-4047-953c-f9fbbd8c6930)
 
+#### PersonServiceImpl:
+![](https://github.com/user-attachments/assets/b4de57cf-b8e7-4c9b-bb82-731de3150e81)
+![](https://github.com/user-attachments/assets/54ef74e6-0a90-4657-991a-809ace5d8aa3)
+مشاهده می‌کنیم که دو تا از متدها کاور نشده‌اند که با اضافه کردن متدهای زیر به کلاس PersonServiceImplTest آن‌ها را کاور کرده‌ایم.
+
+![](https://github.com/user-attachments/assets/4f20683b-7f6f-422c-959c-168e3638d5d3)
+![](https://github.com/user-attachments/assets/e43f3137-7013-4444-96d7-9f30e177f035)
+
+![](https://github.com/user-attachments/assets/c6ef73d6-e309-4798-bbbd-8ecfbccc2737)
+
+## نتیجه
+اکنون مشاهده می‌کنیم که پوشش آزمون همه کلاس‌ها به ۱۰۰٪ رسیده است.
+![](https://github.com/user-attachments/assets/cff77b13-5fc5-4f62-99d0-c8b4e48b5a9d)
+
+
 
