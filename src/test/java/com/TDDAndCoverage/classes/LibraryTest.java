@@ -53,6 +53,13 @@ public class LibraryTest {
     }
 
     @Test
+    public void testStudentHasBookInReturningBook() {
+        library.addBook(book);
+        library.addStudent(student);
+        assertFalse(library.returnBook(book, student), "Student does not have the book, returnBook must return False");
+    }
+
+    @Test
     public void testRemovingBookFromStudentListInReturningBook() {
         library.addBook(book);
         library.addStudent(student);
