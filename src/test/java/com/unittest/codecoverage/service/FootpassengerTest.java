@@ -17,14 +17,9 @@ public class FootpassengerTest {
 
     @Test
     public void testSetAndGetCrossedTheCrosswalk() {
-        // Initially, crossedTheCrosswalk should be false
         assertFalse(footpassenger.crossedTheCrosswalk());
-
-        // Set crossedTheCrosswalk to true and verify
         footpassenger.setCrossedTheCrosswalk(true);
         assertTrue(footpassenger.crossedTheCrosswalk());
-
-        // Set crossedTheCrosswalk to false and verify
         footpassenger.setCrossedTheCrosswalk(false);
         assertFalse(footpassenger.crossedTheCrosswalk());
     }
