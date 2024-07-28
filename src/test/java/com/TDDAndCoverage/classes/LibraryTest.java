@@ -32,6 +32,34 @@ public class LibraryTest {
     }
 
     @Test
+    public void testBookExistenceInLendingBook() {
+        library.addStudent(student);
+        assertFalse(library.lendBook(book, student), "Book is not in library list, lendBook must return False");
+    }
+
+    @Test
+    public void testStudentHasBookInLendingBook() {
+        library.addBook(book);
+        library.addBook(book);
+        library.addStudent(student);
+        library.lendBook(book, student);
+        assertFalse(library.lendBook(book, student), "Student already has book, lendBook must return False");
+    }
+
+    @Test
+    public void testStudentExistenceInReturningBook() {
+        library.addBook(book);
+        assertFalse(library.returnBook(book, student), "Student is not in library list, returnBook must return False");
+    }
+
+    @Test
+    public void testStudentHasBookInReturningBook() {
+        library.addBook(book);
+        library.addStudent(student);
+        assertFalse(library.returnBook(book, student), "Student does not have the book, returnBook must return False");
+    }
+
+    @Test
     public void testRemovingBookFromStudentListInReturningBook() {
         library.addBook(book);
         library.addStudent(student);
